@@ -1,0 +1,5 @@
+MySql Notes
+
+Connect as user: mysql -u root
+Launch: C:\> "C:\Program Files\MySQL\MySQL Server 5.5\bin\mysqld" --console
+Shutdown: "C:\Program Files\MySQL\MySQL Server 5.5\bin\mysqladmin" -u root shutdown

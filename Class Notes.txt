@@ -1,0 +1,13 @@
+Class setup
+
+Install:
+Eclipse drop in c:\, and a workspace in c:\
+Fitness  ??
+
+add external jar Fitness.jar
+Add farm, and fitfixtures packages
+
+
+Intro to Eclipse:
+ctrl-s compiles the code.
+Actually, run JUnit once and then use F11 to save/test the code.
