@@ -5,12 +5,12 @@
   </a>
 This code is released into the public domain. Use as you will.  
 
-Description of Farm Game
-
-  	XXXXX   X = dirt 
-  1	XXXXW   W = water
-  2	XXXXB   B = bog
+# Description of Farm Game
+```
+  0 XXXXX   X = dirt 
+  1 XXXXW   W = water
+  2 XXXXB   B = bog
   3 XXSXW   S = seeds
   4 XXWXX   
   5 XXCXX   C = carrots
-  
+ ``` 
