@@ -5,6 +5,9 @@
   </a>
 This code is released into the public domain. Use as you will.  
 
+This game has the backend logic built with TDD and is usefull to use as a "convincer" demonstration about the value that TDD provides. 
+
+
 # Description of Farm Game
 ```
   0 XXXXX   X = dirt 
