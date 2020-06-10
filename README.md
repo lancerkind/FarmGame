@@ -7,6 +7,7 @@ This code is released into the public domain. Use as you will.
 
 This game has the backend logic built with TDD and is usefull to use as a "convincer" demonstration about the value that TDD provides. 
 
+There is also Fitnesses fixtures for the game, which, with some adjustment, could be used to build macro tests for an ATDD demonstration.
 
 # Description of Farm Game
 ```
