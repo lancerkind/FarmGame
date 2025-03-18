@@ -6,13 +6,13 @@ public class Time {
 
 	public String update(Map map)
 	{
-		for (int i=0;i<map.show().length;i++){
-			MapObject[] mapObj = map.show();
+		for (var i = 0; i<map.show().length; i++){
+			var mapObj = map.show();
 			
-			if("W" ==(mapObj[i].toString())){
+			if("W" == (mapObj[i].toString())){
 				map.changeWhatsThere(i, map.new Dirt());
 			}
-			if ("B"==(mapObj[i].toString())){
+			if ("B"== (mapObj[i].toString())){
 				map.changeWhatsThere(i, map.new Water());
 			}
 		}

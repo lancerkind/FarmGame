@@ -24,19 +24,19 @@ public class MapTest {
 
 	@Test
 	public void testInitializedAsDirt() {
-		Map.MapObject gotTheseMapObjects[] = map.show();
-		Map.Dirt dirt = map.new Dirt();
+		var gotTheseMapObjects = map.show();
+		var dirt = map.new Dirt();
 
-		for (MapObject actualMapObject : gotTheseMapObjects)
-			assertTrue(dirt.equals(actualMapObject));
+		for (var actualMapObject : gotTheseMapObjects)
+            assertEquals(dirt, actualMapObject);
 	}
 
 	@Test
 	public void testMapObjectNotEquals() {
-		Map.Dirt dirt = map.new Dirt();
-		Map.Water water = map.new Water();
+		var dirt = map.new Dirt();
+		var water = map.new Water();
 
-		assertFalse(dirt.equals(water));
+        assertNotEquals(dirt, water);
 	}
 
 	@Test
@@ -52,19 +52,18 @@ public class MapTest {
 		// setup
 
 		// exercise
-		Map.MapObject gotTheseMapObjects[] = map.show();
-		Map.Dirt dirt = map.new Dirt();
+		var gotTheseMapObjects = map.show();
+		var dirt = map.new Dirt();
 
 		// Assert
-		for (MapObject actualMapObject : gotTheseMapObjects)
-			assertTrue(dirt.equals(actualMapObject));
+		for (var actualMapObject : gotTheseMapObjects)
+            assertEquals(dirt, actualMapObject);
 	}
 
 	@Test
 	public void changeLocation() {
 		// setup
-
-		int arbitraryLocation = 0;
+		var arbitraryLocation = 0;
 		// exercise
 		map.changeWhatsThere(arbitraryLocation, map.new Water());
 		// assert
@@ -88,7 +87,7 @@ public class MapTest {
 
 	@Test
 	public void whatsThereAndNoArgConstructor() {
-		int arbitraryLocation = 3;
+		var arbitraryLocation = 3;
 		map.changeWhatsThere(arbitraryLocation, map.new Bog());
 
 		assertEquals("B", map.whatsThere(arbitraryLocation));
@@ -96,14 +95,14 @@ public class MapTest {
 
 	@Test
 	public void constructWithStringInput() {
-		String mapThatsNotDefaultData = "WXXXXWXB";
+		var mapThatsNotDefaultData = "WXXXXWXB";
 		map = new Map(mapThatsNotDefaultData);
 		assertEquals(mapThatsNotDefaultData, map.toString());
 	}
 
 	@Test
 	public void constructWithTooMuchStringInput() {
-		String mapThatHasTooManyXs = "XXXXXXXXXXXXXXXXX";
+		var mapThatHasTooManyXs = "XXXXXXXXXXXXXXXXX";
 
 		assertThatThrownBy(() -> new Map(mapThatHasTooManyXs))
 				.isInstanceOf(IndexOutOfBoundsException.class)
@@ -112,7 +111,7 @@ public class MapTest {
 
 	@Test
 	public void constructWithNotEnoughStringInput() {
-		String mapIsTooSmall = "XX";
+		var mapIsTooSmall = "XX";
 
 		assertThatThrownBy(() -> new Map(mapIsTooSmall))
 				.isInstanceOf(IndexOutOfBoundsException.class);
@@ -120,7 +119,7 @@ public class MapTest {
 
 	@Test
 	public void constructWithInvalidMapCharacters() {
-		String mapWithInvalidCharacters = "QQXXWXXX";
+		var mapWithInvalidCharacters = "QQXXWXXX";
 
 		assertThatThrownBy(() -> new Map(mapWithInvalidCharacters))
 				.isInstanceOf(MapCharacterNotSupported.class);

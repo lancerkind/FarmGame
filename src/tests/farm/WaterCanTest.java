@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class WaterCanTest {
-
 	Map map;
 	private WaterCan waterCan;
 
@@ -26,7 +25,7 @@ class WaterCanTest {
 
 	@Test
 	void pourTwiceCreatesABog() {
-		int location = 0;
+		var location = 0;
 		assertPourMakesWater(waterCan, location);
 
 		waterCan.pour(location, map);

@@ -5,12 +5,12 @@ public class Map {
 	// Map Objects
 	final public String Water = "W";
 	final public String Dirt = "X";
-	private MapObject farmLand[];
-	private int maplocations = 8;
+	final private MapObject farmLand[];
+	final private int maplocations = 8;
 	
 	public Map() {
 		this("XXXXXXXX");
-	}
+}
 
 	public Map(String mapData) {
 		if (mapData.length() != maplocations) {
@@ -21,9 +21,9 @@ public class Map {
 		}
 
 		farmLand = new MapObject[maplocations];
-		int distanceFromLeft = 0;
+		var distanceFromLeft = 0;
 
-		for (char mapCharacter : mapData.toCharArray()) {
+		for (var mapCharacter : mapData.toCharArray()) {
 			
 			switch (mapCharacter) {
 			case 'W':
@@ -42,8 +42,8 @@ public class Map {
 	}
 	
 	public String toString() {
-		StringBuffer mapToRead = new StringBuffer();
-		MapObject [] stripOfFarmLand = farmLand;
+		var mapToRead = new StringBuilder();
+		var stripOfFarmLand = farmLand;
 		
 		for (MapObject mapObject : stripOfFarmLand)
 			mapToRead.append(mapObject.toString());		

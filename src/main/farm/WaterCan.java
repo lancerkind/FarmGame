@@ -6,5 +6,4 @@ public class WaterCan {
 			map.changeWhatsThere(location, map.new Bog());
 		}else map.changeWhatsThere(location, map.new Water());
 	}
-
 }

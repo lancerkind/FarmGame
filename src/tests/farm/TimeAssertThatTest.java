@@ -10,10 +10,10 @@ public class TimeAssertThatTest {
 	@Test
 	public void update_OfDirtIsDirt(){
 		// test setup
-		Map map = new Map("XXXXXXXX");
-		Time time = new Time();
+		var map = new Map("XXXXXXXX");
+		var time = new Time();
 		// exercise unit under test
-		String newMap = time.update(map);
+		var newMap = time.update(map);
 		// Assertion 
 		assertThat(newMap).isEqualTo("XXXXXXXX");
 	}
@@ -21,20 +21,20 @@ public class TimeAssertThatTest {
 	@Test
 	public void update_WaterDriesToDirt(){
 		// Setup
-		Map map = new Map("WXXXXXXX");
-		Time time = new Time();
+		var map = new Map("WXXXXXXX");
+		var time = new Time();
 		// executea
-		String mapString = time.update(map);
+		var mapString = time.update(map);
 		//assert
 		assertThat(mapString).isEqualTo("XXXXXXXX");
 	}
 	@Test
 	public void update_BogDriesToWater(){
 		// setup
-		Map map = new Map("WXBXXXXX");
-		Time time = new Time();
+		var map = new Map("WXBXXXXX");
+		var time = new Time();
 		// exercise unit under test
-		String mapString = time.update(map);
+		var mapString = time.update(map);
 		// Assertion
 		assertThat(mapString).isEqualTo("XXWXXXXX");
 	}
@@ -42,10 +42,10 @@ public class TimeAssertThatTest {
 	@Test
 	public void updateBogXXX() {
 		// setup
-		Map map = new Map("WXBBXXXX");
-		Time time = new Time();
+		var map = new Map("WXBBXXXX");
+		var time = new Time();
 		// exercise unit under test
-		String mapString = time.update(map);
+		var mapString = time.update(map);
 		// Assertion
 		assertThat(mapString).isEqualTo("XXWWXXXX");
 	}
@@ -53,9 +53,9 @@ public class TimeAssertThatTest {
 	@Test
 	public void update_EveryLocationWaterToDirt(){
 		
-		Map map = new Map("WWWWWWWW");
-		Time time = new Time();
-		String mapString = time.update(map);
+		var map = new Map("WWWWWWWW");
+		var time = new Time();
+		var mapString = time.update(map);
 		assertThat(mapString).isEqualTo("XXXXXXXX");
 	}
 }
